@@ -70,8 +70,10 @@ a {
 .page-header {
   color: #fff;
   text-align: center;
-  background-color: #159957;
-  background-image: linear-gradient(120deg, #155799, #159957); }
+  background-image: url("Background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
   @media screen and (min-width: 64em) {
     .page-header {
       padding: 5rem 6rem; } }
@@ -260,28 +262,31 @@ a {
   /* Common styles for all menus */
 .menu {
   line-height: 1;
-  margin: 0 auto 3em;
+  margin:auto;
 }
 
 .menu__list {
-  position: relative;
+  position: center;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin: 0;
+  margin: auto;
   padding: 0;
   list-style: none;
 }
 
 .menu__item {
+  position:center;
   display: block;
-  margin: 1em 0;
+  margin: auto;
+  width:5%;
 }
 
 .menu__link {
   font-size: 1.05em;
   font-weight: bold;
+  margin:auto;
   display: block;
   padding: 1em;
   cursor: pointer;
@@ -302,9 +307,6 @@ a {
 /* Individual styles */
 
 /* Alonso */
-.menu--alonso .menu__item {
-  margin: 0;
-}
 
 .menu--alonso .menu__link {
   width: 120px;
@@ -317,31 +319,16 @@ a {
 
 .menu--alonso .menu__link:hover,
 .menu--alonso .menu__link:focus {
-  color: #929292;
+  color: #b5b5b5;
 }
 
 .menu--alonso .menu__item--current .menu__link {
-  color: #159957;
+  color: #b5b5b5;
   -webkit-transition: color 0.5s;
   transition: color 0.5s;
 }
 
-.menu--alonso .menu__line {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 120px;
-  height: 2px;
-  pointer-events: none;
-  border: 1px solid #fff;
-  border-width: 0 45px;
-  background: #159957;
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  -webkit-transition-timing-function: cubic-bezier(1, 0.01, 0, 1);
-  -webkit-transition-timing-function: cubic-bezier(1, 0.01, 0, 1.22);
-  transition-timing-function: cubic-bezier(1, 0.01, 0, 1.22);
-}
+
 
 .menu--alonso .menu__item:nth-child(1).menu__item--current ~ .menu__line {
   -webkit-transform: translate3d(0, 0, 0);
